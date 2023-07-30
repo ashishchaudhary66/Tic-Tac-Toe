@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(255, 255, 0, 1) 0%, rgba(255, 59, 0, 1) 100%);
+}
+.container{
+    width: 90%;
+    max-width: 20rem;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-box{
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    min-width: 6rem;
+    padding: 0px 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.bottom-button{
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    min-width: 6rem;
+    padding: 0px 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.game-grid{
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.25);
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 20rem;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.box{
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.box0,.box1,.box3,.box4{
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+.box2,.box5{
+    border-bottom: 2px solid white;
+}
+.box6,.box7{
+    border-right: 2px solid white;
+}
+.active{
+    display: flex;
+}
+.win{
+    background-color: green ;
+}
