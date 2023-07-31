@@ -12,7 +12,7 @@
 .container{
     width: 90%;
     max-width: 20rem;
-    margin: 3rem auto;
+    margin: 0rem auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
