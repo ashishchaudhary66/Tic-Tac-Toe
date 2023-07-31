@@ -41,6 +41,7 @@ function handleClick(index){
         gridBoxes[index].style.pointerEvents='none';
         currentPlayer=currentPlayer==='X'?'O':'X';
         topBox.innerHTML='Player '+currentPlayer;
+        mactchDraw();
         checkWinner();
     }
 }
@@ -62,11 +63,17 @@ function checkWinner(){
                 gridBoxes[element[0]].classList.add('win');
                 gridBoxes[element[1]].classList.add('win');
                 gridBoxes[element[2]].classList.add('win');
-                return;
+
+                //mark unClickable
+                gridBoxes.forEach((box)=>{
+                    box.style.pointerEvents='none';
+                });
         }
     })
+}
+function mactchDraw(){
     totalCount++;
-    if(totalCount===9){
+    if(totalCount===9 ){
         topBox.innerHTML='Match Draw';
         topBox.style.backgroundColor="red";
         bottomBtn.innerHTML='Play Again';
